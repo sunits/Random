@@ -7,6 +7,7 @@
 #    5. If you want to list all the bookmarked paths, type "mark s"
 #    6. If you want to cd to a particular path, Do "mark s" first and check the number adjacent to the path you want to move to. Then type mark #umber
 
+# Credits: The script was originally written by Vinay. NK, IIT- Madrasa
 
 fileName="${HOME}/.markedLocations.txt"
 flag=0

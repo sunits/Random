@@ -1,3 +1,13 @@
+# A nice path manager. Replacement for pushd and popd
+## usage
+#    1. Copy this file into home folder
+#    2. put a shortcut into your bashrc to execute this script. Example:  alias mark="source ${HOME}/mark.sh"
+#    3. create a empty file in home folder named .markedLocations.txt
+#    4. If you want to bookmark the current path, just type "mark ."
+#    5. If you want to list all the bookmarked paths, type "mark s"
+#    6. If you want to cd to a particular path, Do "mark s" first and check the number adjacent to the path you want to move to. Then type mark #umber
+
+
 fileName="${HOME}/.markedLocations.txt"
 flag=0
 
