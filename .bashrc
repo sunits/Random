@@ -69,8 +69,6 @@ alias pyserver='python -m SimpleHTTPServer';
 
 
 
-r=( $(openssl rand 100000 | sha1sum) ); printf "%s${r[0]:0:13}\n"
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
