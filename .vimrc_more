@@ -1,0 +1,81 @@
+syntax enable
+nore ; :
+nore % v%
+"set background=light
+"colorscheme solarized
+"let g:solarized_termcolors=256
+
+execute pathogen#infect()
+filetype plugin indent on
+syntax on
+
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+colorscheme darkblue
+set cul                                           
+hi CursorLine term=none cterm=none ctermbg=4 
+
+
+set showmatch
+set mat=2
+set cursorline
+"set cursorcolumn
+set ignorecase
+set smartcase
+set hlsearch
+set wrap " wrap lines
+set si " Smart indent
+set number
+set wildmenu
+set tabstop=4
+set shiftwidth=4
+set expandtab
+vnoremap <silent> * : call Visualization('f')<CR>
+
+" This is make sure the tags used in ctags are updated once the VIM  Buffer is
+" updated
+" au BufWritePost *.py,*.c,*.cpp,*.h silent! !ctags -R &
+
+" TO toggle nerd tree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeDirArrows=0
+" To ensure vim close if only nerd tress is there
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Esc key mapping to a set of keys
+inoremap fjk <Esc>
+
+" Insert current path
+inoremap \ic <C-R>=getcwd()<CR>
+
+" Copy and paste from system clipboard
+vmap <C-c> "+y
+vmap <C-p> "+p
+
+"" Move around in insert mode
+"inoremap <A-h> <C-o>h
+"inoremap <A-j> <C-o>j
+"inoremap <A-k> <C-o>k
+"inoremap <A-l> <C-o>l
+"
+"" resize current buffer by +/- 5 [To resize window splits]
+nnoremap <D-left> :vertical resize -5<cr>
+nnoremap <D-down> :resize +5<cr>
+nnoremap <D-up> :resize -5<cr>
+nnoremap <D-right> :vertical resize +5<cr>
+
+" Switch between window splits using big J or K and expand the split to its 
+" full size. 
+" Move vertically in the window through the horizontal splits... 
+map <C-J> <C-w>j<C-w>_ 
+map <C-K> <C-w>k<C-w>_ 
+
+" Move horizontally in the window through the vertical splits... 
+map <C-H> <C-w>h<C-w>\| 
+map <C-L> <C-w>l<C-w>\| 
+
+"This will look in the current directory for tags, and work up the tree
+"towards root until one is found. IOW, you can be anywhere in your source tree
+"instead of just the root of it.
+set tags=./tags;/
