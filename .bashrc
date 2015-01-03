@@ -19,6 +19,8 @@ alias  psr="ps aux | grep"
 alias fm="free -m"
 alias feg="free -g"
 
+function lll(){ ls -ltch $1 | less; }
+
 function cdn(){
 cmd=""
 for (( i=0; i < $1; i++))
