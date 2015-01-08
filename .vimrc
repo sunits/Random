@@ -116,3 +116,5 @@ filetype plugin indent on
 
 " Use fjk keys in place of Esc. Will prevent moving of hand evey time you want to exit the insert mode
 inoremap fjk <Esc>
+nnoremap fk  :tabnext<CR>
+nnoremap fj  :tabprev<CR>
