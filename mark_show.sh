@@ -1,13 +1,13 @@
-# A nice path manager. Replacement for pushd and popd
-## usage
-#    1. Copy this file into home folder
-#    2. put a shortcut into your bashrc to execute this script. Example:  alias mark="source ${HOME}/mark.sh"
-#    3. create a empty file in home folder named .markedLocations.txt
-#    4. If you want to bookmark the current path, just type "mark ."
-#    5. If you want to list all the bookmarked paths, type "mark s"
-#    6. If you want to cd to a particular path, Do "mark s" first and check the number adjacent to the path you want to move to. Then type mark #umber
-
-# Credits: The script was originally written by Vinay. NK, IIT- Madrasa
+###################################
+# Author: Vinay NK
+# Organization: IIT Madras
+# Purpose: keep stack of commonly used path and have easy access to them 
+# Usage: mark . => To put the current path onto the stack
+#        mark s => Show the stack
+#        mark <string> => go to the first hit after searching through the stack
+#Important: Please put the following code onto your bashrc
+#       alias mark="source ${HOME}/mark.sh"
+###################################
 
 fileName="${HOME}/.markedLocations.txt"
 flag=0
@@ -50,7 +50,8 @@ if [ "${flag}" = "0" ]
 then
    #cat -n ${fileName} 2>/dev/null|grep -i "$1"
    #path=cat -n ${fileName} 2>/dev/null|grep -i "$1"
- 
+#   path="$(grep -in  ${1} $fileName ) "
+
    lineCount="$(grep -in  ${1} $fileName | wc -l )"
 
    if [[ $lineCount -gt 1 ]]; then
@@ -70,7 +71,7 @@ then
            echo -e "\t$color$ele";
        done
 
-   elif [[ $lineCount == 1 ]]; then
+   elif [[ $lineCount == 1 ]]; then        
        path="$(grep ${1} $fileName| head -n1)"
        echo  $path;
        cd "$path"
