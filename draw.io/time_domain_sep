@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-01-05T15:22:45.132Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0" etag="Is3waw-1gZpwaNEsg5Rh" version="12.4.8" type="github">
+<mxfile host="www.draw.io" modified="2020-01-05T15:24:13.114Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0" etag="pXkFDDd6YD-EcNN1ZxWB" version="12.4.8" type="github">
   <diagram id="fM6LY6b4fggBMgrFnvBT" name="Page-1">
     <mxGraphModel dx="981" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="1" shadow="0">
       <root>
@@ -71,7 +71,7 @@
           <mxGeometry x="980" y="175" width="60" height="20" as="geometry"/>
         </mxCell>
         <mxCell id="-jMtahAWOIrmDvGobH-B-20" value="&lt;div&gt;$$s_{J_p}$$&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="970" y="220" width="80" height="20" as="geometry"/>
+          <mxGeometry x="970" y="210" width="80" height="20" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
